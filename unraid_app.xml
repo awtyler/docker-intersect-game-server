@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>intersect-game-server</Name>
+  <Repository>rhindon/intersect-game-server</Repository>
+  <Registry>https://hub.docker.com/r/rhindon/intersect-game-server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/rhindon/intersect-game-server/</Support>
+  <Project>https://www.freemmorpgmaker.com/</Project>
+  <Overview># Intersect Game Server&#xD;
+&#xD;
+Intersect is cross platform compatible, completely free, soon to be open source, and has very relaxed licensing.&#xD;
+&#xD;
+[https://www.freemmorpgmaker.com/](https://www.freemmorpgmaker.com/)</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <ExtraParams>-i</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1628877757</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description># Intersect Game Server&#xD;
+&#xD;
+Intersect is cross platform compatible, completely free, soon to be open source, and has very relaxed licensing.&#xD;
+&#xD;
+[https://www.freemmorpgmaker.com/](https://www.freemmorpgmaker.com/)</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5400</HostPort>
+        <ContainerPort>5400</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/intersect-game-server</HostDir>
+      <ContainerDir>/intersect</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Server Port" Target="5400" Default="5400" Mode="udp" Description="Port for the Intersect server" Type="Port" Display="always" Required="true" Mask="false">5400</Config>
+  <Config Name="AppData Config Path" Target="/intersect" Default="/mnt/user/appdata/intersect-game-server" Mode="rw" Description="Server Data Path" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/intersect-game-server</Config>
+</Container>
